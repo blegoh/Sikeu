@@ -1,0 +1,300 @@
+body {
+	margin: 0;
+	padding: 0;
+}
+
+.wrapper {
+	width: 85%;
+	margin: auto;
+}
+a {
+	transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	-webkit-transition: all 0.3s;
+	-o-transition: all 0.3s;
+}
+
+/*Reset Bootstrap*/
+.popover.right .arrow {
+	top:22%;
+}
+
+
+#header {
+	width: 100%;
+	height: auto;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	background: #179179;
+	color: #FFFFFF;
+	top: 0px;
+	position: fixed;
+	z-index: 99;
+}
+#header label {
+	width: 100%;
+	text-align: right;
+	font-size: 12px;
+	font-weight: 300;
+}
+#header img {
+	width: 50px;
+	height: 50px;
+}
+#header h3 {
+	color: #FFFFFF;
+	margin-bottom: 10px;
+	margin-top: 10px;
+	padding-left: 20px;
+}
+#header a i {
+	width: 50px;
+	height: 50px;
+	font-size: 50px;
+	color: #FFFFFF;
+}
+#header a i:hover {
+	text-decoration: none;
+}
+
+#container {
+	width: 100%;
+	height: auto;
+	padding: 0px;
+	margin: 70px 0px 0px 0px;
+}
+
+#sidemenu {
+	width: 16%;
+	height: 100%;
+	position: fixed;
+	top: 70px;
+	left: 0px;
+	/*background: #022C3B;*/
+	background: #262626;
+}
+/*SIDE MENU*/
+#sidemenu ul {
+	list-style: none;
+	padding: 0px;
+}
+#sidemenu li a {
+	display: block;
+	/*border-bottom: #3e9791 1px solid;*/
+	padding: 10px 25px 10px 25px;
+	color: #FFFFFF;
+}
+#sidemenu li a:hover {
+	text-decoration: none;
+	background: #2e3436;
+}
+#sidemenu li a:enabled {
+	text-decoration: none;
+	background: #3e9791;
+}
+#sidemenu li a i {
+	float: right;
+}
+#sidemenu ul li ul {
+	border-top: #222222 2px solid;
+}
+#sidemenu ul li li a {
+	background: #179179;
+}
+ul.dropdown-menu {
+	left: 100%;
+	top: 0;
+	margin-top: 0%;
+	border-radius: 0;
+	border: none;
+	background: #13807a;
+}
+.dropdown-menu li a {
+	width: 100%;
+	background: #dff0d8;
+	display: block;
+}
+
+.navbar-default .navbar-nav > .open > a, .navbar-default
+.navbar-nav > .open > a:focus, .navbar-default .navbar-nav > .open > a:hover {
+	background: #3e9791;
+}
+
+.nav .open > a {
+	background: #3e9791;
+}
+
+/*TOP MENU*/
+#login {
+	width: 100%;
+	height: 100%;
+	background: url("../img/bg-login.jpg");
+}
+#login form{
+	width: 100%;
+	height: auto;
+	margin-top: 150px;
+	padding: 25px;
+	background: #C2C8D1;
+	color: #FFFFFF;
+	border-radius: 4px;
+}
+#login p {
+	text-align: left;
+	padding: 0px;
+	margin-top: 10px;
+	margin-bottom: 5px;
+}
+#login input {
+	width: 100%;
+	padding: 8px;
+	color: #000000;
+}
+#login input[type=submit] {
+	width: 100px;
+	padding: 15px 25px 15px 25px;
+	margin-top: 15px;
+	border: none;
+	border-radius: 2px;
+	color: #000000;
+}
+#login input[type=submit]:hover {
+	background: #333333;
+	color: #f0f0f0;
+}
+.menu {
+	width: 100%;
+	height: 50px;
+	position: fixed;
+	top: 105px;
+	background: #99cb84;
+}
+.menu ul {
+	list-style: none;
+	margin: 0;
+}
+.menu li a {
+	display: block;
+	width: auto;
+	padding: 15px;
+	float: left;
+	color: #FFFFFF;
+}
+.menu li a:hover {
+	background: #ccffcc;
+	text-decoration: none;
+	color: #262626;
+}
+.menu a i {
+	padding-left: 10px;
+}
+
+
+
+
+/*Content*/
+#content {
+	width: 84%;
+	margin-left: 16%;
+	padding: 60px 60px 60px 60px;
+}
+.top {
+	margin-top: 0px;
+}
+.user {
+	width: 80%;
+	height: auto;
+	border-radius: 2px;
+	background: #13807a;
+	padding: 5px 10px 5px 15px;
+	margin: 5px 0px 5px 0px;
+}
+.user label {
+	width: 100%;
+	font-weight: 400;
+	font-size: 12px;
+	margin-bottom: 0px;
+	float: left;
+}
+.user .row img {
+	width: 60px;
+	height: 60px;
+	margin: 0px;
+}
+
+/*Pembayaran Gaji*/
+.daftar-pegawai {
+	width: 100%;
+	height: auto;
+	border: #3e9791 1px solid;
+	border-radius: 4px;
+	padding: 30px;
+}
+.daftar-pegawai ul {
+	list-style: none;
+	padding: 0;
+	margin: 0px;
+}
+.daftar-pegawai li a {
+	display: block;
+	background: #3e9791;
+	/*background: #e6efb3;*/
+	padding: 8px 20px 8px 30px;
+	margin-top: 20px;
+	color: #FFFFFF;
+	border-radius: 3px;
+}
+.daftar-pegawai li a:hover {
+	background: #1F5150;
+	text-decoration: none;
+}
+.daftar-pegawai li a h4 {
+	margin-bottom: 2px;
+}
+.btn-group {
+	margin-top: 20px;
+}
+
+.gaji {
+	width: 100%;
+	height: auto;
+	border: #3e9791 1px solid;
+	border-radius: 4px;
+	padding: 30px;
+}
+.gaji ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+.gaji li a {
+	width: 100px;
+	border-radius: 2px;
+	text-align: center;
+	display: inline-block;
+	float: left;
+	margin-right: 20px;
+	margin-bottom: 30px;
+	padding: 12px;
+	color: #FFFFFF;
+	background: #3e9791;
+}
+.gaji li a:hover {
+	background: #1F5150;
+	text-decoration: none;
+}
+.gaji table {
+	width: 80%;
+}
+.gaji th {
+	border: 2px solid #000000;
+	padding: 5px 10px 5px 15px;
+}
+.gaji td {
+	border-bottom: 1px solid #EEEEEE;
+	padding: 3px 10px 3px 15px;
+}
+.gaji input {
+	width: 100%;
+	padding-left: 5px;
+}
