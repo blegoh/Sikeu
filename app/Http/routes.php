@@ -51,6 +51,11 @@ Route::get('tagihan/ukt',[
     'uses' => 'TagihanController@show'
 ]);
 
+Route::get('tagihan/ukt/add',[
+    'midleware' => 'auth',
+    'uses' => 'TagihanController@add'
+]);
+
 
 Route::get('gaji',function(){
     return view('gaji.gaji');

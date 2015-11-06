@@ -19,4 +19,10 @@ class Tagihan extends Model
      * @var string
      */
     protected $table = 'Tagihan';
+
+    public $timestamps = false;
+
+    public function nama(){
+        return $this->belongsTo('App\Models\Mahasiswa','NIM');
+    }
 }
