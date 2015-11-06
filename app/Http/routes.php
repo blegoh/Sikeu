@@ -35,12 +35,10 @@ Route::post('ukt',[
     'middleware' => 'auth',
     'uses' => 'UKTController@showUKT'
 ]);
-
 Route::get('ukt/add/{jalurID}',[
     'midleware' => 'auth',
     'uses' => 'UKTController@add'
 ]);
-
 Route::post('ukt/add/{jalurID}',[
     'midleware' => 'auth',
     'uses' => 'UKTController@prosesAdd'
@@ -50,12 +48,19 @@ Route::get('tagihan/ukt',[
     'midleware' => 'auth',
     'uses' => 'TagihanController@show'
 ]);
-
 Route::get('tagihan/ukt/add',[
     'midleware' => 'auth',
     'uses' => 'TagihanController@add'
 ]);
 
+Route::get('pengajuan',[
+    'midleware' => 'auth',
+    'uses' => 'PengajuanController@show'
+]);
+Route::get('pengajuan/add',[
+    'midleware' => 'auth',
+    'uses' => 'PengajuanController@add'
+]);
 
 Route::get('gaji',function(){
     return view('gaji.gaji');
