@@ -1,10 +1,11 @@
 @extends('master')
 @section('content')
-    <form class="form-horizontal" role="form">
+    <form class="form-horizontal" role="form" method="post">
+        {!! csrf_field() !!}
         <div class="form-group">
             <label class="control-label col-sm-2" for="nomer">No Pengajuan :</label>
             <div class="col-sm-10">
-                <input type="text" class="form-control" id="noPengajuan" placeholder="Nomor Pengajuan">
+                <input type="text" class="form-control" name="noPengajuan" id="noPengajuan" placeholder="Nomor Pengajuan">
             </div>
         </div>
         <div class="form-group">

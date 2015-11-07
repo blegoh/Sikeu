@@ -61,6 +61,22 @@ Route::get('pengajuan/add',[
     'midleware' => 'auth',
     'uses' => 'PengajuanController@add'
 ]);
+Route::post('pengajuan/add',[
+    'midleware' => 'auth',
+    'uses' => 'PengajuanController@prosesAdd'
+]);
+Route::get('/pengajuan/detail/{id}',[
+    'midleware' => 'auth',
+    'uses' => 'PengajuanController@detail'
+]);
+Route::get('/pengajuan/detail/{id}/add',[
+    'midleware' => 'auth',
+    'uses' => 'PengajuanController@detailAdd'
+]);
+Route::post('/pengajuan/detail/{id}/add',[
+    'midleware' => 'auth',
+    'uses' => 'PengajuanController@prosesDetailAdd'
+]);
 
 Route::get('gaji',function(){
     return view('gaji.gaji');

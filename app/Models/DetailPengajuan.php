@@ -23,5 +23,10 @@ class DetailPengajuan extends Model
     /**
      * @var string
      */
-    protected $primaryKey = 'KodeMax';
+    protected $primaryKey = 'KodeMak';
+
+    /**
+     * @var bool
+     */
+    public $timestamps = false;
 }

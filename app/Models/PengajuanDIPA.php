@@ -25,7 +25,9 @@ class PengajuanDIPA extends Model
      */
     protected $primaryKey = 'NomerPengajuan';
 
+    public $timestamps = false;
+
     public function details(){
-        return $this->hasMany('App\Models\DetailPengajuan.php','KodeMax');
+        return $this->hasMany('App\Models\DetailPengajuan','NomerPengajuan');
     }
 }
