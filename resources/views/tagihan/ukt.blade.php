@@ -1,7 +1,8 @@
 @extends('master')
 @section('content')
     @if($tagihans->count() == 0)
-        Tagihan untuk semester ini belum dibuat
+        <h3>Tagihan untuk semester ini belum dibuat</h3>
+        <a href="/tagihan/ukt/add" class="btn btn-primary">Buat</a>
     @else
         <table class="table table-striped">
             <thead>
