@@ -31,21 +31,30 @@ Route::get('ukt',[
     'middleware' => 'auth',
     'uses' => 'UKTController@show'
 ]);
-Route::post('ukt',[
+
+Route::get('ukt/dana',[
     'middleware' => 'auth',
-    'uses' => 'UKTController@showUKT'
+    'uses' => 'UKTController@danaUKT'
 ]);
-Route::get('ukt/add/{jalurID}',[
-    'midleware' => 'auth',
+
+Route::get('ukt/{prodiId}', [
+    'middleware' => 'auth',
+    'uses' => 'UKTController@detailUKT'
+]);
+
+Route::post('ukt/edit','UKTController@editUKT');
+
+Route::get('ukt/add/{prodiId}/{jalurId}',[
+    'middleware' => 'auth',
     'uses' => 'UKTController@add'
 ]);
-Route::post('ukt/add/{jalurID}',[
-    'midleware' => 'auth',
+Route::post('ukt/add/{prodiId}/{jalurId}',[
+    'middleware' => 'auth',
     'uses' => 'UKTController@prosesAdd'
 ]);
 
 Route::get('tagihan/ukt',[
-    'midleware' => 'auth',
+    'middleware' => 'auth',
     'uses' => 'TagihanController@show'
 ]);
 Route::get('tagihan/ukt/add',[
@@ -53,54 +62,60 @@ Route::get('tagihan/ukt/add',[
     'uses' => 'TagihanController@addTagihanUKT'
 ]);
 Route::get('tagihan/wisuda',[
-    'midleware' => 'auth',
+    'middleware' => 'auth',
     'uses' => 'TagihanController@showWisuda'
+]);
+Route::get('tagihan/um',[
+    'middleware' => 'auth',
+    'uses' => 'TagihanController@showUM'
+]);
+
+Route::get('permohonan',[
+    'middleware' => 'auth',
+    'uses' => 'PermohonanController@show'
 ]);
 
 Route::get('pengajuan',[
-    'midleware' => 'auth',
+    'middleware' => 'auth',
     'uses' => 'PengajuanController@show'
 ]);
 Route::get('pengajuan/add',[
-    'midleware' => 'auth',
+    'middleware' => 'auth',
     'uses' => 'PengajuanController@add'
 ]);
 Route::post('pengajuan/add',[
-    'midleware' => 'auth',
+    'middleware' => 'auth',
     'uses' => 'PengajuanController@prosesAdd'
 ]);
 Route::get('/pengajuan/detail/{id}',[
-    'midleware' => 'auth',
+    'middleware' => 'auth',
     'uses' => 'PengajuanController@detail'
 ]);
 Route::get('/pengajuan/finish/{id}',[
-    'midleware' => 'auth',
+    'middleware' => 'auth',
     'uses' => 'PengajuanController@finish'
 ]);
 Route::get('/pengajuan/detail/{id}/add',[
-    'midleware' => 'auth',
+    'middleware' => 'auth',
     'uses' => 'PengajuanController@detailAdd'
 ]);
 Route::post('/pengajuan/detail/{id}/add',[
-    'midleware' => 'auth',
+    'middleware' => 'auth',
     'uses' => 'PengajuanController@prosesDetailAdd'
 ]);
 Route::get('/pengajuan/detail/{id}/edit',[
-    'midleware' => 'auth',
+    'middleware' => 'auth',
     'uses' => 'PengajuanController@detailEdit'
 ]);
 Route::post('/pengajuan/detail/{id}/edit',[
-    'midleware' => 'auth',
+    'middleware' => 'auth',
     'uses' => 'PengajuanController@prosesDetailEdit'
 ]);
 Route::get('/pengajuan/detail/{id}/delete',[
-    'midleware' => 'auth',
+    'middleware' => 'auth',
     'uses' => 'PengajuanController@detailDelete'
 ]);
 
 Route::get('gaji',function(){
     return view('gaji.gaji');
 });
-
-Route::get('soap','SoapController@server');
-Route::get('wsdl','SoapController@wsdl');

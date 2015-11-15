@@ -2,7 +2,7 @@
 @section('content')
     @if($tagihans->count() == 0)
         <h3>Tagihan untuk semester ini belum dibuat</h3>
-        <a href="/tagihan/ukt/add" class="btn btn-primary">Buat</a>
+        <a href="/tagihan/ukt/add" class="btn btn-primary">Buat Tagihan</a>
     @else
         <table class="table table-striped">
             <thead>
@@ -14,16 +14,15 @@
             </tr>
             </thead>
             <tbody>
-        @foreach($tagihans as $tagihan)
-            <tr>
-                <td>{{$tagihan->NIM}}</td>
-                <td>{{$tagihan->nama->Nama}}</td>
-                <td>{{$tagihan->Nominal}}</td>
-                <td>{{($tagihan->TglBayar == "")?"Belum":"Lunas"}}</td>
-            </tr>
-        @endforeach
+            @foreach($tagihans as $tagihan)
+                <tr>
+                    <td>{{$tagihan->NIM}}</td>
+                    <td>{{$tagihan->nama->Nama}}</td>
+                    <td>{{$tagihan->Nominal}}</td>
+                    <td>{{($tagihan->TglBayar == "")?"Belum":"Lunas"}}</td>
+                </tr>
+            @endforeach
             </tbody>
         </table>
     @endif
-
 @endsection

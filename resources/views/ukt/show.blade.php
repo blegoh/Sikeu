@@ -1,30 +1,28 @@
 @extends('master')
 @section('content')
-    <form action="" method="post">
-        {!! csrf_field() !!}
-        <select name="jalur"  class="form-control">
-            @foreach($jalurs as $jalur)
-                <option value="{{$jalur->JalurID}}">{{$jalur->NamaJalur}}</option>
-            @endforeach
-        </select>
-        <br />
-        <button class="btn btn-primary">Tampilkan UKT</button>
-    </form>
-    @if(isset($isShow))
-        <br />
-        @if($ukts->count() == 0)
-            <h2>Belum Ada UKT untuk tahun akademik tahun ini</h2>
-            <a href="/ukt/add/{{$jalurSelected->JalurID}}" class="btn btn-primary">Isi UKT</a>
-        @else
-            <table class="table">
-                @foreach($ukts as $ukt)
-                    <tr>
-                        <td>{{$ukt->golongan->NamaGolongan}}</td>
-                        <td>{{$ukt->Nominal}}</td>
-                    </tr>
-                @endforeach
-            </table>
-        @endif
 
-    @endif
+    <table class="table table-bordered">
+        <thead>
+        <tr>
+            <th>Fakultas</th>
+            <th>Program Studi</th>
+            <th>Aksi</th>
+        </tr>
+        </thead>
+        <tbody>
+            @foreach($fakultas as $fakultas)
+                <tr>
+                    <td rowspan="{{$fakultas->prodi->count()}}">{{$fakultas->NamaFakultas}}</td>
+                    <?php $n = 1; ?>
+                    @foreach($fakultas->prodi as $prodi)
+                        <?=($n !== 1)?'<tr>':''?>
+                        <td>{{$prodi->NamaProdi}}</td>
+                        <td><a href="/ukt/{{$prodi->ProdiID}}" class="btn btn-primary">Detail</a></td>
+                        <?=($n !== 1)?'</tr>':''?>
+                        <?php $n++;?>
+                    @endforeach
+                </tr>
+            @endforeach
+        </tbody>
+    </table>
 @endsection

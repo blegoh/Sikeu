@@ -5,8 +5,8 @@
     <link rel="stylesheet" type="text/css" href="/css/style.css">
     <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="/css/font-awesome.min.css">
-    <script src="js/jquery-1.11.3.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+    <script src="/js/jquery-1.11.3.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
     <script type="text/javascript">
         $(document).ready(function(){
         });
@@ -26,8 +26,8 @@
         </div>
         <div class="col-sm-6">
             <div class="col-sm-8">
-                <label style="font-size: 11px">1324939232323</label>
-                <label><strong>Putri Damayanti</strong></label>
+                <label style="font-size: 11px">Welcome</label>
+                <label><strong>@yield('user')</strong></label>
             </div>
             <div class="col-sm-2">
                 <a href="/auth/logout"><i class="fa fa-sign-out"></i></a>
