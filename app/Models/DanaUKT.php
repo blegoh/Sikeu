@@ -9,9 +9,8 @@
 namespace App\Models;
 
 use DB;
-use Illuminate\Database\Query\Builder;
 
-class DanaUKT extends Builder
+class DanaUKT
 {
     public static function getDana(){
         return DB::table('Fakultas')

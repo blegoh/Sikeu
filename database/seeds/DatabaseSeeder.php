@@ -13,7 +13,11 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         Model::unguard();
-
+        App\Role::insert([
+            ['name' => 'Kasie Keuangan'],
+            ['name' => 'PUMK'],
+            ['name' => 'PR 2'],
+        ]);
         // $this->call(UserTableSeeder::class);
 
         Model::reguard();

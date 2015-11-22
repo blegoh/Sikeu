@@ -109,7 +109,12 @@
     <div id="content">
         @yield('content')
     </div>
-
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $("#content").hide();
+            $("#content").fadeIn('slow');
+        });
+    </script>
 </div>
 </body>
 </html>

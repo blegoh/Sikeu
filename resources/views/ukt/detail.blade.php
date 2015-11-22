@@ -23,24 +23,28 @@
                     </tbody>
                     <script type="text/javascript">
                         $('#edit{{$ukt->UKTID}}').click(function(){
-                            var curent = $('#nominal{{$ukt->UKTID}}').html();
-                            $('#nominal{{$ukt->UKTID}}').html("<input id=\"isian{{$ukt->UKTID}}\" type=\"text\" value=\""+curent+"\">");
-                        });
-                        $('#nominal{{$ukt->UKTID}}').focusout(function (){
-                            var isian = $('#isian{{$ukt->UKTID}}').val();
-                            var CSRF_TOKEN = $('input[name=_token]').val();
-                            $.ajax({
-                                url: "/ukt/edit",
-                                type: "post",
-                                data: {
-                                    _token: CSRF_TOKEN,
-                                    nominal: isian,
-                                    uktId: '{{ $ukt->UKTID }}}'
-                                },
-                                success : function(data){
-                                    $('#nominal{{$ukt->UKTID}}').html(data);
-                                }
-                            });
+                            var caption = $('#edit{{$ukt->UKTID}}').html();
+                            if (caption == "Edit"){
+                                var curent = $('#nominal{{$ukt->UKTID}}').html();
+                                $('#nominal{{$ukt->UKTID}}').html("<input id=\"isian{{$ukt->UKTID}}\" type=\"text\" value=\""+curent+"\">");
+                                $('#edit{{$ukt->UKTID}}').html("Update");
+                            }else{
+                                var isian = $('#isian{{$ukt->UKTID}}').val();
+                                var CSRF_TOKEN = $('input[name=_token]').val();
+                                $.ajax({
+                                    url: "/ukt/edit",
+                                    type: "post",
+                                    data: {
+                                        _token: CSRF_TOKEN,
+                                        nominal: isian,
+                                        uktId: '{{ $ukt->UKTID }}}'
+                                    },
+                                    success : function(data){
+                                        $('#nominal{{$ukt->UKTID}}').html(data);
+                                        $('#edit{{$ukt->UKTID}}').html("Edit");
+                                    }
+                                });
+                            }
                         });
                     </script>
                 @endforeach
