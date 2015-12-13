@@ -2,8 +2,8 @@
 /**
  * Created by PhpStorm.
  * User: blegoh
- * Date: 31/10/15
- * Time: 7:45
+ * Date: 13/12/15
+ * Time: 20:34
  */
 
 namespace App\Models;
@@ -11,17 +11,17 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Golongan extends Model
+class RekapBarang extends Model
 {
     /**
      * The database table used by the model.
      *
      * @var string
      */
-    protected $table = 'Golongan';
+    protected $table = 'rekapbarang';
 
     /**
      * @var string
      */
-    protected $primaryKey = 'GolID';
+    protected $primaryKey = 'id';
 }

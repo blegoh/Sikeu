@@ -149,3 +149,5 @@ Route::post('pembayaran/ukt','PembayaranController@showTagihanUkt');
 Route::get('/pembayaran/bayar/{jenis}/{id}','PembayaranController@bayar');
 
 Route::get('pdf','UKTController@pdf');
+
+Route::get('kas','KasController@show');
