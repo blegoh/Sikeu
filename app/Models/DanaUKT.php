@@ -23,4 +23,11 @@ class DanaUKT
             ->groupBy('Fakultas.NamaFakultas')
             ->get();
     }
+
+    public static function validasi($prodiID, $jalurMasuk){
+        DB::table('UKT')
+            ->where('ProdiID', $prodiID)
+            ->where('JalurID', $jalurMasuk)
+            ->update(['isValidated' => 1]);
+    }
 }

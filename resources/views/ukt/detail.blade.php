@@ -18,7 +18,13 @@
                     <tr>
                         <td>{{$ukt->golongan->NamaGolongan}}</td>
                         <td id="nominal{{$ukt->UKTID}}">{{$ukt->Nominal}}</td>
-                        <td><button class="btn btn-primary" id="edit{{$ukt->UKTID}}">Edit</button></td>
+                        <td>
+                            @if($ukt->IsValidated == 0)
+                                <button class="btn btn-primary" id="edit{{$ukt->UKTID}}">Edit</button>
+                            @else
+                                Tervalidasi
+                            @endif
+                        </td>
                     </tr>
                     </tbody>
                     <script type="text/javascript">
@@ -50,7 +56,7 @@
                 @endforeach
             </table>
         @else
-            <a href="/ukt/add/{{$prodi->ProdiID}}/{{$i}}" class="btn btn-primary">ISI UKT</a>
+            <a href="/ukt/add/{{$prodi->ProdiID}}/{{$i+1}}" class="btn btn-primary">ISI UKT</a>
         @endif
     @endfor
 

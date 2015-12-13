@@ -25,7 +25,13 @@ class Mahasiswa extends Model
      */
     protected $primaryKey = 'NIM';
 
+    public $timestamps = false;
+
     public function ukt(){
         return $this->belongsTo('App\Models\UKT','UKTID');
+    }
+
+    public function prodi(){
+        return $this->belongsTo('App\Models\Prodi','ProdiID');
     }
 }

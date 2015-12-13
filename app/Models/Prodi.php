@@ -24,4 +24,9 @@ class Prodi extends Model
      * @var string
      */
     protected $primaryKey = 'ProdiID';
+
+    public function ukts(){
+        return $this->hasMany('App\Models\UKT','ProdiID');
+    }
+
 }

@@ -17,7 +17,7 @@ class TagihanPendaftar extends Model
      * The database table used by the model.
      * @var string
      */
-    protected $table = 'Tagihan';
+    protected $table = 'TagihanPendaftar';
 
     public $timestamps = false;
 

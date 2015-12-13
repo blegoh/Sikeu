@@ -37,12 +37,25 @@ Route::get('ukt/dana',[
     'uses' => 'UKTController@danaUKT'
 ]);
 
+Route::post('ukt/edit',[
+    'middleware' => 'auth',
+    'uses' => 'UKTController@editUKT'
+]);
+
+Route::get('ukt/validasi/{jalurMasuk}',[
+    'middleware' => 'auth',
+    'uses' => 'UKTController@validasi'
+]);
+
+Route::get('ukt/validasi/{prodiID}/{jalurMasuk}',[
+    'middleware' => 'auth',
+    'uses' => 'UKTController@prosesValidasi'
+]);
+
 Route::get('ukt/{prodiId}', [
     'middleware' => 'auth',
     'uses' => 'UKTController@detailUKT'
 ]);
-
-Route::post('ukt/edit','UKTController@editUKT');
 
 Route::get('ukt/add/{prodiId}/{jalurId}',[
     'middleware' => 'auth',
@@ -57,6 +70,15 @@ Route::get('tagihan/ukt',[
     'middleware' => 'auth',
     'uses' => 'TagihanController@show'
 ]);
+Route::get('tagihan/ukt/{fakultasID}/{thnAkademik}',[
+    'middleware' => 'auth',
+    'uses' => 'TagihanController@show'
+]);
+Route::post('filter/tagihan/ukt',[
+    'middleware' => 'auth',
+    'uses' => 'TagihanController@filter'
+]);
+
 Route::get('tagihan/ukt/add',[
     'midleware' => 'auth',
     'uses' => 'TagihanController@addTagihanUKT'
@@ -119,3 +141,11 @@ Route::get('/pengajuan/detail/{id}/delete',[
 Route::get('gaji',function(){
     return view('gaji.gaji');
 });
+
+Route::get('service','ServiceController@show');
+Route::get('pembayaran','PembayaranController@index');
+Route::get('pembayaran/ukt','PembayaranController@ukt');
+Route::post('pembayaran/ukt','PembayaranController@showTagihanUkt');
+Route::get('/pembayaran/bayar/{jenis}/{id}','PembayaranController@bayar');
+
+Route::get('pdf','UKTController@pdf');

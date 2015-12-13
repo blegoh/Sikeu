@@ -41,66 +41,12 @@
         <ul>
             <li><a href="dashboard.blade.php">Home</a></li>
             <li class="dropdown">
-                <a id="dLabel" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="">Gaji<i class="fa fa-caret-right"></i></a>
+                <a id="dLabel" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="">Tagihan<i class="fa fa-caret-right"></i></a>
                 <ul class="dropdown-menu" aria-labelledby="dLabel">
-                    <li><a href="pembayarangaji.blade.php">Pembayaran Gaji</a></li>
-                    <li><a href="">Pembayaran Gaji 13</a></li>
-                    <li><a href="">Uang Makan</a></li>
-                    <li><a href="">Kekurangan Gaji</a></li>
-                    <li><a href="">Gaji Terusan</a></li>
-                </ul>
-            </li>
-            <li class="dropdown">
-                <a id="dLabel" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="">Pegawai<i class="fa fa-caret-right"></i></a>
-                <ul class="dropdown-menu" aria-labelledby="dLabel">
-                    <li><a href="">Pegawai Pensiun dan Cuti</a></li>
-                    <li><a href="">Sertifikasi Dosen</a></li>
-                </ul>
-            </li>
-            <li class="dropdown">
-                <a id="dLabel" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="">Mahasiswa<i class="fa fa-caret-right"></i></a>
-                <ul class="dropdown-menu" aria-labelledby="dLabel">
-                    <li><a href="">Golongan UKT</a></li>
-                    <li><a href="">Penurunan UKT</a></li>
-                    <li><a href="">Pembayaran SP</a></li>
-                    <li><a href="">Ujian Mandiri</a></li>
-                    <li><a href="">Wisuda</a></li>
-                </ul>
-            </li>
-            <li class="dropdown">
-                <a id="dLabel" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="">Honor<i class="fa fa-caret-right"></i></a>
-                <ul class="dropdown-menu" aria-labelledby="dLabel">
-                    <li><a href="pembayarangaji.blade.php">Pembayaran Gaji</a></li>
-                    <li><a href="">Pembayaran Gaji 13</a></li>
-                    <li><a href="">Uang Makan</a></li>
-                    <li><a href="">Kekurangan Gaji</a></li>
-                    <li><a href="">Gaji Terusan</a></li>
-                </ul>
-            </li>
-            <li class="dropdown">
-                <a id="dLabel" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="">Belanja<i class="fa fa-caret-right"></i></a>
-                <ul class="dropdown-menu" aria-labelledby="dLabel">
-                    <li><a href="">Perjalanan Dinas</a></li>
-                    <li><a href="">Uang Duka</a></li>
-                    <li><a href="">Honorarium</a></li>
-                </ul>
-            </li>
-            <li class="dropdown">
-                <a id="dLabel" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="">Penunjang<i class="fa fa-caret-right"></i></a>
-                <ul class="dropdown-menu" aria-labelledby="dLabel">
-                    <li><a href="">Pembukuan Keuangan</a></li>
-                    <li><a href="">SPTB</a></li>
-                    <li><a href="">Penerimaan Dana SP</a></li>
-                </ul>
-            </li>
-            <li class="dropdown">
-                <a id="dLabel" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="">Surat Penunjang<i class="fa fa-caret-right"></i></a>
-                <ul class="dropdown-menu" aria-labelledby="dLabel">
-                    <li><a href="ssp.blade.php">SSP</a></li>
-                    <li><a href="">SPTJM</a></li>
-                    <li><a href="">SPPR</a></li>
-                    <li><a href="">SSP</a></li>
-                    <li><a href="">SP2D</a></li>
+                    <li><a href="/tagihan/ukt">UKT</a></li>
+                    <li><a href="/tagihan/wisuda">Wisuda</a></li>
+                    <li><a href="/tagihan/sp">SP</a></li>
+                    <li><a href="/tagihan/um">UM</a></li>
                 </ul>
             </li>
         </ul>
